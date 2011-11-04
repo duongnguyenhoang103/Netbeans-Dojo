@@ -1,0 +1,473 @@
+# Git Magic - A guide to using Git
+# This file is distributed under the GNU GENERAL PUBLIC LICENSE Version 3.
+# Benn Lynn <benlynn@gmail.com>, 2007.
+# Armin Stebich <armin@lordofbikes.de>, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Git Magic deutsch\n"
+"Report-Msgid-Bugs-To: bennlynn@gmail.com\n"
+"POT-Creation-Date: 2010-10-30 08:21+0300\n"
+"PO-Revision-Date: 2011-07-10 17:25+0200\n"
+"Last-Translator: Armin Stebich <armin@lordofbikes.de>\n"
+"Language-Team: DE <gitmagic@lordofbikes.de>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: UTF-8\n"
+"Plural-Forms: \n"
+
+#. type: Plain text
+#: ../en/drawbacks.txt:2
+msgid "== Appendix A: Git Shortcomings =="
+msgstr "== Anhang A: Git's Mängel =="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:4
+msgid ""
+"There are some Git issues I've swept under the carpet. Some can be handled "
+"easily with scripts and hooks, some require reorganizing or redefining the "
+"project, and for the few remaining annoyances, one will just have to wait. "
+"Or better yet, pitch in and help!"
+msgstr ""
+"Ein paar Git-Probleme habe ich bisher unter den Teppich gekehrt. Einige "
+"lassen sich einfach mit Skripten und 'Hooks' lösen, andere erfordern eine "
+"Reorganisation oder Neudefinition des gesamten Projekt und für die wenigen "
+"verbleibenden Beeinträchtigungen kannst Du nur auf eine Lösung warten. Oder "
+"noch besser, anpacken und mithelfen."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:6
+msgid "=== SHA1 Weaknesses ==="
+msgstr "=== SHA1 Schwäche ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:11
+msgid ""
+"As time passes, cryptographers discover more and more SHA1 weaknesses. "
+"Already, finding hash collisions is feasible for well-funded organizations. "
+"Within years, perhaps even a typical PC will have enough computing power to "
+"silently corrupt a Git repository."
+msgstr ""
+"Mit der Zeit entdecken Kryptographen immer mehr Schwächen an SHA1. Schon "
+"heute wäre es technisch machbar für finanzkräftige Unternehmen Hash-"
+"Kollisionen zu finden. In ein paar Jahren hat vielleicht schon ein ganz "
+"normaler Heim-PC ausreichend Rechenleistung um ein Git 'Reopsitory' "
+"unbemerkt zu korrumpieren."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:14
+msgid ""
+"Hopefully Git will migrate to a better hash function before further research "
+"destroys SHA1."
+msgstr ""
+"Hoffentlich stellt Git auf eine bessere Hash Funktion um, bevor die "
+"Forschung SHA1 komplett unnütz macht."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:16
+msgid "=== Microsoft Windows ==="
+msgstr "=== Microsoft Windows ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:18
+msgid "Git on Microsoft Windows can be cumbersome:"
+msgstr "Git unter Microsoft Windows kann frustrierend sein:"
+
+#. type: Plain text
+#: ../en/drawbacks.txt:20
+msgid ""
+"- http://cygwin.com/[Cygwin], a Linux-like environment for Windows, contains "
+"http://cygwin.com/packages/git/[a Windows port of Git]."
+msgstr ""
+"- http://cygwin.com/[Cygwin], eine Linux ähnliche Umgebung für Windows, "
+"enthält http://cygwin.com/packages/git/[eine Windows Portierung von Git]."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:22
+msgid ""
+"- http://code.google.com/p/msysgit/[Git on MSys] is an alternative requiring "
+"minimal runtime support, though a few of the commands need some work."
+msgstr ""
+"- http://code.google.com/p/msysgit/[Git unter MSys] ist eine Alternative, "
+"die sehr wenig Laufzeitunterstützung erfordert, jedoch bedürfen einige "
+"Kommandos noch einer Überarbeitung."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:24
+msgid "=== Unrelated Files ==="
+msgstr "=== Dateien ohne Bezug ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:26
+msgid ""
+"If your project is very large and contains many unrelated files that are "
+"constantly being changed, Git may be disadvantaged more than other systems "
+"because single files are not tracked. Git tracks changes to the whole "
+"project, which is usually beneficial."
+msgstr ""
+"Wenn Dein Projekt sehr groß ist und viele Dateien enthält, die in keinem "
+"direkten Bezug stehen, trotzdem aber häufig geändert werden, kann Git "
+"nachteiliger sein als andere Systeme, weil es keine einzelnen Dateien "
+"überwacht. Git überwacht immer das ganze Projekt, was normalerweise schon "
+"von Vorteil ist."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:28
+msgid ""
+"A solution is to break up your project into pieces, each consisting of "
+"related files. Use *git submodule* if you still want to keep everything in a "
+"single repository."
+msgstr ""
+"Eine Lösung ist es, Dein Projekt in kleinere Stücke aufzuteilen, von denen "
+"jedes nur die in Beziehung stehenden Dateien enthält. Benutze *git "
+"submodule* wenn Du trotzdem alles in einem einzigen 'Repository' halten "
+"willst."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:30
+msgid "=== Who's Editing What? ==="
+msgstr "=== Wer macht was? ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:32
+msgid ""
+"Some version control systems force you to explicitly mark a file in some way "
+"before editing. While this is especially annoying when this involves talking "
+"to a central server, it does have two benefits:"
+msgstr ""
+"Einige Versionsverwaltungssysteme zwingen Dich explizit eine Datei auf "
+"irgendeine Weise für die Bearbeitung zu kennzeichnen. Obwohl es extrem "
+"lästig ist, wenn es die Kommunikation mit einem zentralen Server erfordert, "
+"so hat es doch zwei Vorteile:"
+
+#. type: Bullet: '  1. '
+#: ../en/drawbacks.txt:34
+msgid "Diffs are quick because only the marked files need be examined."
+msgstr ""
+"Unterschiede sind schnell gefunden, weil nur die markierten Dateien "
+"untersucht werden müssen."
+
+#. type: Bullet: '  2. '
+#: ../en/drawbacks.txt:36
+msgid ""
+"One can discover who else is working on the file by asking the central "
+"server who has marked it for editing."
+msgstr ""
+"Jeder kann herausfinden wer sonst gerade an einer Datei arbeitet, indem er "
+"beim zentralen Server anfragt, wer die Datei zum Bearbeiten markiert hat."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:38
+msgid ""
+"With appropriate scripting, you can achieve the same with Git. This requires "
+"cooperation from the programmer, who should execute particular scripts when "
+"editing a file."
+msgstr ""
+"Mit geeigneten Skripten kannst Du das auch mit Git hinkriegen. Das erfordert "
+"aber die Mitarbeit der Programmierer, denn sie müssen die Skripte auch "
+"aufrufen, wenn sie eine Datei bearbeiten."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:40
+msgid "=== File History ==="
+msgstr "=== Dateihistorie ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:42
+msgid ""
+"Since Git records project-wide changes, reconstructing the history of a "
+"single file requires more work than in version control systems that track "
+"individual files."
+msgstr ""
+"Da Git die Änderungen über das gesamte Projekt aufzeichnet, erfordert die "
+"Rekonstruktion des Verlaufs einer einzelnen Datei mehr Aufwand als in "
+"Versionsverwaltungssystemen die einzelne Dateien überwachen."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:44
+msgid ""
+"The penalty is typically slight, and well worth having as other operations "
+"are incredibly efficient. For example, `git checkout` is faster than `cp -"
+"a`, and project-wide deltas compress better than collections of file-based "
+"deltas."
+msgstr ""
+"Die Nachteile sind üblicherweise gering und werden gern in Kauf genommen, da "
+"andere Operationen dafür unglaublich effizient sind. Zum Beispiel ist `git "
+"checkout` schneller als `cp -a` und projektweite Unterschiede sind besser zu "
+"komprimieren als eine Sammlung von Änderungen auf Dateibasis."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:46
+msgid "=== Initial Clone ==="
+msgstr "=== Der erster Klon ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:48
+msgid ""
+"Creating a clone is more expensive than checking out code in other version "
+"control systems when there is a lengthy history."
+msgstr ""
+"Einen Klon zu erstellen ist aufwendiger als in anderen "
+"Versionsverwaltungssystemen, wenn ein längerer Verlauf existiert."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:50
+msgid ""
+"The initial cost is worth paying in the long run, as most future operations "
+"will then be fast and offline. However, in some situations, it may be "
+"preferable to create a shallow clone with the `--depth` option. This is much "
+"faster, but the resulting clone has reduced functionality."
+msgstr ""
+"Der initiale Aufwand lohnt sich aber auf längere Sicht, da die meisten "
+"zukünftigen Operationen dann schnell und offline erfolgen. Trotzdem gibt es "
+"Situationen, in denen es besser ist einen oberflächlichen Klon mit der `--"
+"depth` Option zu erstellen. Das geht wesentlich schneller, aber der "
+"resultierende Klon hat nur eingeschränkte Funktionalität."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:52
+msgid "=== Volatile Projects ==="
+msgstr "=== Unbeständige Projekte ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:54
+msgid ""
+"Git was written to be fast with respect to the size of the changes. Humans "
+"make small edits from version to version. A one-liner bugfix here, a new "
+"feature there, emended comments, and so forth. But if your files are "
+"radically different in successive revisions, then on each commit, your "
+"history necessarily grows by the size of your whole project."
+msgstr ""
+"Git wurde geschrieben um schnell zu sein, im Hinblick auf die Größe der "
+"Änderungen. Leute machen kleine Änderungen von Version zu Version. Ein "
+"einzeiliger Bugfix hier, eine neue Funktion da, verbesserte Kommentare und "
+"so weiter. Aber wenn sich Deine Dateien zwischen aufeinanderfolgenden "
+"Versionen gravierend ändern, dann wird zwangsläufig mit jedem 'Commit' Dein "
+"Verlauf um die Größe des gesamten Projekts wachsen. "
+
+#. type: Plain text
+#: ../en/drawbacks.txt:56
+msgid ""
+"There is nothing any version control system can do about this, but standard "
+"Git users will suffer more since normally histories are cloned."
+msgstr ""
+"Es gibt nichts, was irgendein Versionsverwaltungssystem dagegen machen kann, "
+"aber der Standard Git Anwender leidet mehr darunter, weil normalerweise der "
+"ganze Verlauf geklont wird."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:58
+msgid ""
+"The reasons why the changes are so great should be examined. Perhaps file "
+"formats should be changed. Minor edits should only cause minor changes to at "
+"most a few files."
+msgstr ""
+"Die Ursachen für die großen Unterschiede sollten ermittelt werden. "
+"Vielleicht können Dateiformate geändert werden. Kleinere Bearbeitungen "
+"sollten auch nur minimale Änderungen an so wenig Dateien wie möglich "
+"bewirken."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:60
+msgid ""
+"Or perhaps a database or backup/archival solution is what is actually being "
+"sought, not a version control system. For example, version control may be "
+"ill-suited for managing photos periodically taken from a webcam."
+msgstr ""
+"Vielleicht ist eher eine Datenbank oder Sicherungs-/Archivierungslösung "
+"gesucht, nicht ein Versionsverwaltungssystem. Ein Versionsverwaltungssystem "
+"zum Beispiel ist eine ungeeignete Lösung um Fotos zu verwalten, die "
+"periodisch von einer Webcam gemacht werden."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:62
+msgid ""
+"If the files really must be constantly morphing and they really must be "
+"versioned, a possibility is to use Git in a centralized fashion. One can "
+"create shallow clones, which checks out little or no history of the project. "
+"Of course, many Git tools will be unavailable, and fixes must be submitted "
+"as patches. This is probably fine as it's unclear why anyone would want the "
+"history of wildly unstable files."
+msgstr ""
+"Wenn die Dateien sich tatsächlich konstant verändern und sie wirklich "
+"versioniert werden müssen, ist es eine Möglichkeit Git in zentralisierter "
+"Form zu verwenden. Jeder kann oberflächliche Klone erstellen, die nur wenig "
+"oder gar nichts vom Verlauf des Projekts enthalten. Natürlich sind dann "
+"viele Git Funktionen nicht verfügbar und Änderungen müssen als 'Patches' "
+"übermittelt werden. Das funktioniert wahrscheinlich ganz gut, wenn auch "
+"unklar ist, warum jemand die Versionsgeschichte von wahnsinnig instabilen "
+"Dateien braucht."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:64
+msgid ""
+"Another example is a project depending on firmware, which takes the form of "
+"a huge binary file. The history of the firmware is uninteresting to users, "
+"and updates compress poorly, so firmware revisions would unnecessarily blow "
+"up the size of the repository."
+msgstr ""
+"Ein anderes Beispiel ist ein Projekt, das von Firmware abhängig ist, welche "
+"die Form einer großen Binärdatei annimmt. Der Verlauf der Firmware "
+"interessiert den Anwender nicht und Änderungen lassen sich schlecht "
+"komprimieren, so blähen Firmwarerevisionen die Größe des 'Repository' "
+"unnötig auf."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:66
+msgid ""
+"In this case, the source code should be stored in a Git repository, and the "
+"binary file should be kept separately. To make life easier, one could "
+"distribute a script that uses Git to clone the code, and rsync or a Git "
+"shallow clone for the firmware."
+msgstr ""
+"In diesem Fall sollte der Quellcode der Firmware in einem Git 'Repository' "
+"gehalten werden und die Binärdatei außerhalb des Projekts. Um das Leben zu "
+"vereinfachen, könnte jemand ein Skript erstellen, das Git benutzt um den "
+"Quellcode zu klonen und 'rsync' oder einen oberflächlichen Klon für die "
+"Firmware."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:68
+msgid "=== Global Counter ==="
+msgstr "=== Globaler Zähler ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:70
+msgid ""
+"Some centralized version control systems maintain a positive integer that "
+"increases when a new commit is accepted. Git refers to changes by their "
+"hash, which is better in many circumstances."
+msgstr ""
+"Verschiedene Versionsverwaltungssysteme unterhalten einen Zähler, der mit "
+"jedem 'Commit' erhöht wird. Git referenziert Änderungen anhand ihres SHA1-"
+"Hash, was in vielen Fällen besser ist."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:72
+msgid ""
+"But some people like having this integer around. Luckily, it's easy to write "
+"scripts so that with every update, the central Git repository increments an "
+"integer, perhaps in a tag, and associates it with the hash of the latest "
+"commit."
+msgstr ""
+"Aber einige Leute sind diesen Zähler gewöhnt. Zum Glück ist es einfach, "
+"Skripte zu schreiben, sodass  mit jedem Update das zentrale Git 'Repository' "
+"einen Zähler erhöht. Vielleicht in Form eines 'Tags', der mit dem SHA1-Hash "
+"des letzten 'Commit' verknüpft ist."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:74
+msgid ""
+"Every clone could maintain such a counter, but this would probably be "
+"useless, since only the central repository and its counter matters to "
+"everyone."
+msgstr ""
+"Jeder Klon könnte einen solchen Zähler bereitstellen, aber der wäre "
+"vermutlich nutzlos, denn nur der Zähler des zentralen 'Repository' ist für "
+"alle relevant."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:76
+msgid "=== Empty Subdirectories ==="
+msgstr "=== Leere Unterverzeichnisse ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:78
+msgid ""
+"Empty subdirectories cannot be tracked. Create dummy files to work around "
+"this problem."
+msgstr ""
+"Leere Unterverzeichnisse können nicht überwacht werden. Erstelle eine Dummy-"
+"Datei um dieses Problem zu umgehen."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:80
+msgid ""
+"The current implementation of Git, rather than its design, is to blame for "
+"this drawback. With luck, once Git gains more traction, more users will "
+"clamour for this feature and it will be implemented."
+msgstr ""
+"Die aktuelle Implementierung von Git, weniger sein Design, ist "
+"verantwortlich für diesen Pferdefuß. Mit etwas Glück, wenn Git's Verbreitung "
+"zunimmt und mehr Anwender nach dieser Funktion verlangen, wird sie "
+"vielleicht implementiert."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:82
+msgid "=== Initial Commit ==="
+msgstr "=== Initialer 'Commit' ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:84
+msgid ""
+"A stereotypical computer scientist counts from 0, rather than 1. "
+"Unfortunately, with respect to commits, git does not adhere to this "
+"convention. Many commands are unfriendly before the initial commit. "
+"Additionally, some corner cases must be handled specially, such as rebasing "
+"a branch with a different initial commit."
+msgstr ""
+"Ein klischeehafter Computerwissenschaftler zählt von 0 statt von 1. Leider, "
+"bezogen auf 'Commits', hält sich Git nicht an diese Konvention. Viele "
+"Kommandos sind mürrisch vor dem intialen 'Commit'. Zusätzlich müssen "
+"verschiedene Grenzfälle speziell behandelt werden, wie der 'Rebase' eines "
+"'Branch' mit einem abweichenden initialen 'Commit'."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:86
+msgid ""
+"Git would benefit from defining the zero commit: as soon as a repository is "
+"constructed, HEAD would be set to the string consisting of 20 zero bytes. "
+"This special commit represents an empty tree, with no parent, at some time "
+"predating all Git repositories."
+msgstr ""
+"Git würde davon provitieren, einen Null-'Commit' zu definieren: sofort nach "
+"dem Erstellen eines 'Repository' wird der 'HEAD' auf eine Zeichenfolge von "
+"20 Null-Bytes gesetzt. Dieser spezielle 'Commit' repräsentiert einen leeren "
+"'Tree', ohne Eltern, irgendwann vielleicht der Vorfahr aller Git "
+"'Repositories'."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:88
+msgid ""
+"Then running git log, for example, would inform the user that no commits "
+"have been made yet, instead of exiting with a fatal error. Similarly for "
+"other tools."
+msgstr ""
+"Würde dann zum Beispiel *git log* ausgeführt, würde der Anwender darüber "
+"informiert, daß noch keine 'Commits' gemacht wurden, anstelle mit einem "
+"fatalen Fehler zu beenden. Das gilt stellvertretenden für andere Anweisungen."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:90
+msgid "Every initial commit is implicitly a descendant of this zero commit."
+msgstr ""
+"Jeder initiale 'Commit' ist dann stillschweigend ein Abkömmling dieses "
+"Null-'Commits'."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:92
+msgid ""
+"However there are some problem cases unfortunately. If several branches with "
+"different initial commits are merged together, then rebasing the result "
+"requires substantial manual intervention."
+msgstr ""
+"Leider gibt es noch ein paar Problemfälle. Wenn mehrere 'Branches' mit "
+"unterschiedlichen initialen 'Commits' zusammengeführt und dann ein 'Rebase' "
+"gemacht wird, ist ein manuelles Eingreifen erforderlich."
+
+#. type: Plain text
+#: ../en/drawbacks.txt:94
+msgid "=== Interface Quirks ==="
+msgstr "=== Eigenarten der Anwendung ==="
+
+#. type: Plain text
+#: ../en/drawbacks.txt:97
+msgid ""
+"For commits A and B, the meaning of the expressions \"A..B\" and \"A...B\" "
+"depends on whether the command expects two endpoints or a range. See *git "
+"help diff* and *git help rev-parse*."
+msgstr ""
+"Für die 'Commits' A und B, hängt die Bedeutung der Ausdrücke \"A..B\" und "
+"\"A...B\" davon ab, ob eine Anweisung zwei Endpunkte erwartet oder einen "
+"Bereich. Siehe *git help diff* und *git help rev-parse*."
